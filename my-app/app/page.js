@@ -4,7 +4,7 @@ import  Zain  from "@/components/Zain";
 export default function Home() {
   return (
     <>
-    <div>
+    <div>git
       <h1 className="text-3xl font-bold underline text-center">Zain's Game</h1>
       <Zain />
     </div>
