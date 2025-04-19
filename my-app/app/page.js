@@ -4,8 +4,9 @@ import  Zain  from "@/components/Zain";
 export default function Home() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline text-center">Home</h1>
-      <Zain/>
+    <Zain/>
+      <h1 className="text-3xl font-bold underline text-center">-----------------------------------------</h1>
+      
       <Fahad/>
     </>
   );
