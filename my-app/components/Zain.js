@@ -2,7 +2,7 @@ function Zain() {
     return (
         <>
             
-            <button className="border border-black pl-2 pr-2 pt-2 pb-2">X</button>
+            <button className="border border-black pl-3 pr-3 pt-1 pb-1">X</button>
         </>
     );
 }
