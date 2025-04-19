@@ -1,16 +1,21 @@
 import Fahad from "@/components/Fahad";
 import  Zain  from "@/components/Zain";
+import Muhammad from "@/components/Muhammad";
 export default function Home() {
   return (
-    <> <p>GoGaga</p>
+    <>
     <div>
-      <h1 className="text-3xl font-bold underline text-center">Zain's Game</h1>
+      <h1 className="text-3xl font-bold">Zain's Game</h1>
       <Zain />
     </div>
     <div>
-      <h1 className="text-3xl font-bold underline text-center">Fahad's Game</h1>
+      <h1 className="text-3xl font-bold">Fahad's Game</h1>
       <Fahad/>
-      </div>
+    </div>
+    <div>
+      <h1 className="text-3xl font-bold">Muhammad's Game</h1>
+      <Muhammad/>
+    </div>
     </>
   );
 }
