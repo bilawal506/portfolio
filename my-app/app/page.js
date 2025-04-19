@@ -4,18 +4,22 @@ import Muhammad from "@/components/Muhammad";
 export default function Home() {
   return (
     <>
-    <div>
-      <h1 className="text-3xl font-bold">Zain's Game</h1>
-      <Zain />
-    </div>
-    <div>
-      <h1 className="text-3xl font-bold">Fahad's Game</h1>
-      <Fahad/>
-    </div>
-    <div>
-      <h1 className="text-3xl font-bold">Muhammad's Game</h1>
-      <Muhammad/>
-    </div>
+    <table className="table-auto w-full">
+  <thead>
+    <tr>
+      <th className="px-4 py-2 text-3xl font-bold">Zain</th>
+      <th className="px-4 py-2 text-3xl font-bold">Fahad</th>
+      <th className="px-4 py-2 text-3xl font-bold">Muhammad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td className="border px-4 py-2 text-center"><Zain /></td>
+      <td className="border px-4 py-2 text-center"><Fahad /></td>
+      <td className="border px-4 py-2 text-center"><Muhammad /></td>
+    </tr>
+  </tbody>
+</table>
     </>
   );
 }
