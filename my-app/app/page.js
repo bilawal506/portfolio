@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Fahad from "@/components/Fahad";
 import  Zain  from "@/components/Zain";
 export default function Home() {
