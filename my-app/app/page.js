@@ -4,10 +4,14 @@ import  Zain  from "@/components/Zain";
 export default function Home() {
   return (
     <>
-    <Zain/>
-      <h1 className="text-3xl font-bold underline text-center">Tic Tac Toe Game</h1>
-      
+    <div>
+      <h1 className="text-3xl font-bold underline text-center">Zain's Game</h1>
+      <Zain />
+    </div>
+    <div>
+      <h1 className="text-3xl font-bold underline text-center">Fahad's Game</h1>
       <Fahad/>
+      </div>
     </>
   );
 }
