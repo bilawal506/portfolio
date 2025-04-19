@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
     <Zain/>
-      <h1 className="text-3xl font-bold underline text-center">-----------------------------------------</h1>
+      <h1 className="text-3xl font-bold underline text-center">Tic Tac Toe Game</h1>
       
       <Fahad/>
     </>
