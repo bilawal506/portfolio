@@ -1,14 +1,13 @@
 "use client";
 import { useState } from "react";
-
 export default function Home() {
-  const [player, setplayer] = useState("X")
+  const [player, setPlayer] = useState("X")
   function handleClick(){
     if (player === "O"){
-    setplayer("X")
+    setPlayer("X")
   }
   else{
-    setplayer("O")
+    setPlayer("O")
   }
   }
   return (
