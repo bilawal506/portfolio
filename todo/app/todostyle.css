@@ -1,0 +1,42 @@
+
+
+ .List{   
+    background-color: rgb(243, 142, 162);
+    length: 80%;
+    width: 30%;
+    text-align: center;
+    border-bottom: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-left: 33%;
+    margin-top: 10%;   
+    padding-bottom: 15%;
+ }  
+li{
+    text-align: left;
+    margin-left: 20px;
+}
+ input{
+    border: 1px solid rgb(243, 142, 162);
+    border-radius: 15px;
+    background-color: white;
+ }
+ .Input{
+    background-color: rgb(243, 142, 162);
+    length: 80%;
+    width: 30%;
+    text-align: center;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-left: 33%;
+ }
+
+button{
+    border: black;
+    background: violet;
+    border-radius: 5px;
+    margin-left: 15px;
+    padding: 5px;
+    cursor: pointer;
+}
