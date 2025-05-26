@@ -20,7 +20,6 @@ export default function Todos() {
       .catch((err) => console.error(err));
   }, []);
 
-  // Handle POST on form submit
   function handleSubmit() {
     if (value){
     fetch("https://c417-39-52-253-192.ngrok-free.app/todos/", {
