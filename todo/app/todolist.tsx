@@ -5,10 +5,10 @@ import './todostyle.css';
 export default function Todos() {
   const [todos, setTodos] = useState([]);
   const [value, setValue] = useState("");
-
+  const [uvalue, setUValue] = useState("")
   // Handle GET on mount
   useEffect(() => {
-    fetch("https://c417-39-52-253-192.ngrok-free.app/todos", {
+    fetch("http://127.0.0.1:8000/todos", {
       method: "GET",
       headers: {
         "Content-type": "application/json",
@@ -22,7 +22,7 @@ export default function Todos() {
 
   function handleSubmit() {
     if (value){
-    fetch("https://c417-39-52-253-192.ngrok-free.app/todos/", {
+    fetch("http://127.0.0.1:8000/todos", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -42,7 +42,7 @@ export default function Todos() {
   else {alert("Empty Input")}
 }
 function handleDelete(id:any) {
-  fetch(`https://c417-39-52-253-192.ngrok-free.app/todos/${id}`, {
+  fetch(`http://127.0.0.1:8000/todos/${id}`, {
     method: "DELETE",
     headers: {
       "Content-type": "application/json",
@@ -57,15 +57,26 @@ function handleDelete(id:any) {
     .catch((err) => console.error(err));
 }
 
-
+function updateTask(){
+   <input
+          type="text"
+          placeholder="update your task..."
+          value={uvalue}
+          onChange={(e) => setUValue(e.target.value)}
+        />
+}
   return (
     <>
+    
       <div className="List">
         <h1>Todo List</h1>
         <ul style={{ listStyle: "Circle" }}>
-          {todos.map((todo) => (
+          {todos.map((todo) => (<>
             <li key={todo.id} onClick={()=>{handleDelete(todo.id)}} style={{cursor:"pointer"}}>{todo.name}</li>
+            <button onClick = {updateTask}>update</button>
+            </>
           ))}
+          
         </ul>
       </div>
       <div className="Input">
