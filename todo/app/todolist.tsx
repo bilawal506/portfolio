@@ -67,7 +67,7 @@ function handleDelete(id:any) {
           {todos.map((todo) => (
             <li key={todo.id} onClick={()=>{handleDelete(todo.id)}} style={{cursor:"pointer"}}>{todo.name}</li>
           ))}
-        </ul>
+        </ul> 
       </div>
       <div className="Input">
         <input
