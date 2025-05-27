@@ -85,7 +85,6 @@ def update_todo(todo_id: int, updated_todo: TodoCreate, db: Session = Depends(ge
     db.refresh(todo)
     return todo
 
-
 @app.delete("/todos/{todo_id}")
 def delete_todo(todo_id: int, db: Session = Depends(get_db)):
     todo = db.query(TodoDB).filter(TodoDB.id == todo_id).first()
