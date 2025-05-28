@@ -8,7 +8,7 @@ export default function Todos() {
 
   // Handle GET on mount
   useEffect(() => {
-    fetch("https://c417-39-52-253-192.ngrok-free.app/todos", {
+    fetch("http://127.0.0.1:8000/todos", {
       method: "GET",
       headers: {
         "Content-type": "application/json",
@@ -23,7 +23,7 @@ export default function Todos() {
   // Handle POST on form submit
   function handleSubmit() {
     if (value){
-    fetch("https://c417-39-52-253-192.ngrok-free.app/todos/", {
+    fetch("http://127.0.0.1:8000/todos/", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -43,7 +43,7 @@ export default function Todos() {
   else {alert("Empty Input")}
 }
 function handleDelete(id:any) {
-  fetch(`https://c417-39-52-253-192.ngrok-free.app/todos/${id}`, {
+  fetch(`http://127.0.0.1:8000/todos/${id}`, {
     method: "DELETE",
     headers: {
       "Content-type": "application/json",
