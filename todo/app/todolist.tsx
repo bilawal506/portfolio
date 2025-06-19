@@ -22,7 +22,11 @@ export default function Todos() {
 
   function handleSubmit() {
     if (value){
+<<<<<<< HEAD
     fetch("http://127.0.0.1:8000/todos", {
+=======
+    fetch("http://127.0.0.1:8000/todos/", {
+>>>>>>> 30e8b2ff06fcf510065680596d76b4855911b798
       method: "POST",
       headers: {
         "Content-type": "application/json",
