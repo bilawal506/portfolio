@@ -57,7 +57,7 @@ def home():
     return {"message": "Simple Todo API"}
 
 @app.post("/todos/", response_model=TodoResponse)
-def create_todo(todo: TodoCreate, db: Session = Depends(get_db)):
+def create_todo(todo: TodoCreate, db: Session = Depends(get_db)):    
     new_todo = TodoDB(name=todo.name)
     db.add(new_todo)
     db.commit()
