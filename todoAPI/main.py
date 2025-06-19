@@ -75,6 +75,16 @@ def get_todo(todo_id: int, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Todo not found")
     return todo
 
+@app.put("/todos/{todo_id}", response_model=TodoResponse)
+def update_todo(todo_id: int, updated_todo: TodoCreate, db: Session = Depends(get_db)):
+    todo = db.query(TodoDB).filter(TodoDB.id == todo_id).first()
+    if not todo:
+        raise HTTPException(status_code=404, detail="Todo not found")
+    todo.name = updated_todo.name
+    db.commit()
+    db.refresh(todo)
+    return todo
+
 @app.delete("/todos/{todo_id}")
 def delete_todo(todo_id: int, db: Session = Depends(get_db)):
     todo = db.query(TodoDB).filter(TodoDB.id == todo_id).first()
